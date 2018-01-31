@@ -1,4 +1,9 @@
 module.exports = {
+  target: 'electron-main',
+  node: {
+    __dirname: false,
+    __filename: false,
+  },
   module: {
     rules: [
       {
@@ -16,6 +21,7 @@ module.exports = {
                   targets: {
                     browsers: ['Electron >= 1.7.11'],
                   },
+                  useBuiltIns: 'entry',
                 },
               ],
             ],
