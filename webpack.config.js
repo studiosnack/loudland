@@ -1,4 +1,11 @@
-module.exports = {
+const path = require('path');
+
+const stub = (entry, output) => ({
+  entry: `./src/${entry}`,
+  output: {
+    path: path.resolve(__dirname, 'dist'),
+    filename: output ? output : entry,
+  },
   target: 'electron-main',
   node: {
     __dirname: false,
@@ -11,26 +18,13 @@ module.exports = {
         exclude: /(node_modules)/,
         use: {
           loader: 'babel-loader',
-          options: {
-            presets: [
-              '@babel/preset-flow',
-              '@babel/preset-react',
-              [
-                '@babel/preset-env',
-                {
-                  targets: {
-                    browsers: ['Electron >= 1.7.11'],
-                  },
-                  useBuiltIns: 'entry',
-                },
-              ],
-            ],
-            plugins: [
-              ['@babel/plugin-proposal-class-properties', {loose: true}],
-            ],
-          },
         },
       },
     ],
   },
-};
+});
+
+const main = stub('main.js');
+const renderer = stub('renderer.js');
+
+module.exports = [main, renderer];
