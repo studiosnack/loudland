@@ -1,12 +1,12 @@
 const path = require('path');
 
 const stub = (entry, output) => ({
-  entry: `./src/${entry}`,
+  entry: `./src/${entry}.js`,
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: output ? output : entry,
+    filename: output ? output : `${entry}.js`,
   },
-  target: 'electron-main',
+  target: `electron-${entry}`,
   node: {
     __dirname: false,
     __filename: false,
@@ -24,7 +24,7 @@ const stub = (entry, output) => ({
   },
 });
 
-const main = stub('main.js');
-const renderer = stub('renderer.js');
+const main = stub('main');
+const renderer = stub('renderer');
 
 module.exports = [main, renderer];

@@ -13,6 +13,7 @@ function createWindow() {
   win = new BrowserWindow({
     width: 800,
     height: 600,
+    titleBarStyle: 'hidden',
   });
 
   // and load the index.html of the app.
@@ -22,6 +23,10 @@ function createWindow() {
       protocol: 'file:',
       slashes: true,
     }),
+  );
+
+  BrowserWindow.addDevToolsExtension(
+    '/Users/marcos/Library/Application Support/Google/Chrome/Default/Extensions/fmkadmapgofadopljbjfkapdkoienihi/3.1.0_0',
   );
 
   // Open the DevTools.
