@@ -7,7 +7,6 @@ const {Fragment} = React;
 const Root = () => (
   <Fragment>
     <h1>ohai</h1>
-    <p>lol</p>
   </Fragment>
 );
 
