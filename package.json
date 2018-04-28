@@ -1,0 +1,10 @@
+{
+  "name": "pocky",
+  "version": "0.0.1",
+  "description": "a box full of delight",
+  "main": "index.js",
+  "author": "marcos ojeda",
+  "license": "MIT",
+  "private": true,
+  "workspaces": ["scratchpad", "utils/*"]
+}
