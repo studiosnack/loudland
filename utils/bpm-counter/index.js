@@ -48,7 +48,7 @@ function (_Component) {
         });
 
         if (deltas.length > 1) {
-          const bpm = Math.floor(60000 / (deltas.reduce((a, b) => a + b) / deltas.length));
+          const bpm = Math.floor(60000 / (deltas.reduce((a, b) => a + b, 0) / (deltas.length - 1)));
           _this.props.onBpm && _this.props.onBpm({
             bpm,
             taps

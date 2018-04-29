@@ -1,18 +1,17 @@
-import React, { Component, Fragment } from 'react';
-import BPMCounter from '@nsfmc/bpm-counter';
-import './App.css';
+import React, { Component, Fragment } from "react";
+import BPMCounter from "@nsfmc/bpm-counter";
+import "./App.css";
 
 class App extends Component {
   state = {};
   render() {
     return (
       <div className="App">
-        <BPMCounter onBpm={({bpm}) => this.setState({bpm})}/>
-        <p>{this.state.bpm || 'tap'}</p>
+        <BPMCounter onBpm={({ bpm, taps }) => this.setState({ bpm, taps })} />
+        <p>{this.state.bpm || "tap"}</p>
       </div>
     );
   }
 }
-
 
 export default App;
