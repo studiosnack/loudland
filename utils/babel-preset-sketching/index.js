@@ -1,4 +1,6 @@
 module.exports = function(api, opts) {
+  const prod = process.env.NODE_ENV === "production";
+
   return {
     presets: [
       [
@@ -15,10 +17,10 @@ module.exports = function(api, opts) {
     plugins: [
       require("@babel/plugin-proposal-class-properties").default,
       require("@babel/plugin-proposal-object-rest-spread").default,
+      require("@babel/plugin-proposal-numeric-separator").default,
       require("@babel/plugin-transform-classes").default,
       require("@babel/plugin-transform-destructuring").default,
-      require("@babel/plugin-transform-react-constant-elements").default,
-      require("@babel/plugin-transform-react-display-name").default
-    ]
+      prod && require("@babel/plugin-transform-react-constant-elements").default
+    ].filter(Boolean)
   };
 };

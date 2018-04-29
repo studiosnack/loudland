@@ -8,7 +8,7 @@ export default class BPMCounter extends Component {
 
   static defaultProps = {
     samples: 5,
-    resetTime: 5000,
+    resetTime: 5_000,
     label: "tap for bpm"
   };
 
@@ -35,7 +35,7 @@ export default class BPMCounter extends Component {
 
       if (deltas.length > 1) {
         const bpm = Math.floor(
-          60000 / (deltas.reduce((a, b) => a + b, 0) / (deltas.length - 1) )
+          60_000 / (deltas.reduce((a, b) => a + b, 0) / (deltas.length - 1) )
         );
         this.props.onBpm && this.props.onBpm({ bpm, taps });
 
