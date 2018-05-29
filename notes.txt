@@ -1,0 +1,37 @@
+list window
+  List component
+    - can only have a single list component active (for now)
+  Item Component
+    - delegates to known plugins
+    - if no plugin found, renders plain or whatever
+
+data structure:
+file: {
+  version: string,
+  meta: {},
+  views: View[],
+  filters: Filter[],
+  items: {[key: string]: Item},
+}
+
+Item: {
+  title: string,
+  id: string, // uuid seeded by creator code
+  meta: Object,
+  creator: {
+    id: string,
+    version: string
+  }
+}
+
+Filter: RuleBasedFilter | OrganizedFilter
+RuleBasedFilter: {|
+  name: string,
+  id: string,
+  rule: (items: Item[]) => Item[],
+|}
+OrganizedFilter: {|
+  name: string,
+  id: string,
+  arrangement: string[] // ids,
+|}
