@@ -1,0 +1,22 @@
+.filter-list {
+  list-style: none;
+  flex-flow: row;
+  display: flex;
+}
+
+.filter-item {
+  font-family: andale mono;
+  background: #ededed;
+  width: 150px;
+  margin-right: 5px;
+}
+.filter-title {
+  color: #999;
+  background: white;
+  padding: 5px;
+  border-top: 5px #ededed;
+  margin-bottom: 10px;
+}
+.filter-title strong {
+  color: #000;
+}
