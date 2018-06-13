@@ -6,5 +6,5 @@
   "author": "marcos ojeda",
   "license": "MIT",
   "private": true,
-  "workspaces": ["scratchpad", "utils/*"]
+  "workspaces": ["scratchpad", "milestone", "utils/*"]
 }
