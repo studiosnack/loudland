@@ -1,5 +1,21 @@
 {
   "extends": [
     "config:base"
+  ],
+  "includePaths": [
+    "utils/**",
+    "filterdoc/**",
+    "electrocat/**",
+    "package.json"
+  ],
+  "packageRules": [
+    {
+      "packagePatterns": "^@babel/",
+      "rangeStrategy": "bump"
+    },
+    {
+      "packagePatterns": "^@nsfmc/babel",
+      "rangeStrategy": "bump"
+    }
   ]
 }
