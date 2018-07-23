@@ -1,0 +1,5 @@
+pit boss
+
+pitboss is a set of tools for tracking the current state of possibly-related resources like desktop state, git repo status, etc
+
+given a workspace, pitboss allows you to track and gather related state at arbitrary moments (i.e. when saving a screenshot, making commit, mid-rebase, etc)
