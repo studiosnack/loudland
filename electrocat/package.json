@@ -7,7 +7,7 @@
   "dependencies": {
     "@nsfmc/babel-preset-sketching": "1.0.0",
     "babel-loader": "8.0.0-beta.4",
-    "draft-js": "^0.10.5",
+    "draft-js": "^0.11.0",
     "electron": "^1.7.11",
     "flow-bin": "^0.79.0",
     "react": "^16.2.0",
