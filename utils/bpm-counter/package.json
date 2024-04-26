@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "peerDependencies": {
-    "react": "^16.3.2"
+    "react": "^16.3.2 || ^18.0.0"
   },
   "devDependencies": {
     "@nsfmc/babel-preset-sketching": "1.0.0"
